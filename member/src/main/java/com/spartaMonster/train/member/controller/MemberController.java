@@ -16,16 +16,6 @@ public class MemberController {
     @Resource
     private MemberService memberService;
 
-    @GetMapping("/hello")
-    public String hello(){
-        return "Hello World!!!";
-    }
-
-    @GetMapping("/count")
-    public Integer count(){
-        return memberService.count();
-    }
-
     @PostMapping("/register")
     public CommonResp<Long> register(MemberRegisterReq req){
         long register = memberService.register(req);
