@@ -6,7 +6,7 @@
 模块架构
 - member 成员信息模块
 - common 公共类
-  - aspect拦截日志 （暂未添加）
+  - aspect拦截日志
 - gateway 网关模块
 
 
