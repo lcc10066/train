@@ -51,13 +51,12 @@ public class LoginMemberFilter implements Ordered, GlobalFilter {
             exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
             return exchange.getResponse().setComplete();
         }
-
     }
 
     /**
-     * 优先级设置  值越小  优先级越高
+     * 当有多个过滤器实现时，实现Ordered接口， 优先级设置  值越小  优先级越高，越先执行
      *
-     * @return
+     * @return index
      */
     @Override
     public int getOrder() {

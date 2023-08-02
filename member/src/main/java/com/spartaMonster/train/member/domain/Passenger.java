@@ -1,55 +1,20 @@
-package com.spartaMonster.train.member.resp;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+package com.spartaMonster.train.member.domain;
 
 import java.util.Date;
 
-public class PassengerQueryResp {
-
-    /**
-     *
-     * id
-     */
-    @JsonSerialize(using= ToStringSerializer.class)
+public class Passenger {
     private Long id;
 
-    /**
-     * 后端Long类型范围和前端框架大小不一致，后端返回给前端会出现精度丢失，需要序列化成字符串再返回
-     *
-     * JsonSerialize用于修饰类、getter() 函数、字段等，配置实现序列化 aspects
-     *
-     * 会员id
-     */
-    @JsonSerialize(using= ToStringSerializer.class)
     private Long memberId;
 
-    /**
-     * 姓名
-     */
     private String name;
 
-    /**
-     * 身份证
-     */
     private String idCard;
 
-    /**
-     * 旅客类型|枚举[PassengerTypeEnum]
-     */
     private String type;
 
-    /**
-     * 新增时间
-     */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date createTime;
 
-    /**
-     * 修改时间
-     */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date updateTime;
 
     public Long getId() {

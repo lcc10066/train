@@ -1,44 +1,49 @@
-package com.spartaMonster.train.member.resp;
+package com.spartaMonster.train.member.req;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import jakarta.validation.constraints.NotBlank;
 
 import java.util.Date;
 
-public class PassengerQueryResp {
-
+public class PassengerSaveReq {
     /**
-     *
      * id
      */
-    @JsonSerialize(using= ToStringSerializer.class)
     private Long id;
 
     /**
-     * 后端Long类型范围和前端框架大小不一致，后端返回给前端会出现精度丢失，需要序列化成字符串再返回
-     *
-     * JsonSerialize用于修饰类、getter() 函数、字段等，配置实现序列化 aspects
-     *
      * 会员id
      */
-    @JsonSerialize(using= ToStringSerializer.class)
     private Long memberId;
 
     /**
      * 姓名
      */
+    @NotBlank(message = "【姓名】不能为空")
     private String name;
 
     /**
      * 身份证
      */
+    @NotBlank(message = "【身份证】不能为空")
     private String idCard;
 
     /**
+     *
+     *
+     *
+     *      * @NotNull：不能为null，但可以为empty
+     *      *
+     *      * @NotEmpty：不能为null，而且长度必须大于0
+     *      *
+     *      * @NotBlank：只能作用在String上，不能为null，而且调用trim()后，长度必须大于0
+     *      * 旅客类型|枚举[PassengerTypeEnum]
+     *
      * 旅客类型|枚举[PassengerTypeEnum]
      */
+    @NotBlank(message = "【旅客类型】不能为空")
     private String type;
+
 
     /**
      * 新增时间
@@ -51,6 +56,7 @@ public class PassengerQueryResp {
      */
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date updateTime;
+
 
     public Long getId() {
         return id;
