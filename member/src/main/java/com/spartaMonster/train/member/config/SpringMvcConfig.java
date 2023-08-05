@@ -14,7 +14,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
        同时可以进行url配置
      */
    @Resource
-   LogInterceptor logInterceptor;
+    LogInterceptor logInterceptor;
 
    @Resource
    MemberInterceptor memberInterceptor;

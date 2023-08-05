@@ -1,8 +1,8 @@
 package com.spartaMonster.train.common.controller;
 
 //import com.spartaMonster.train.common.exception.BusinessException;
-import com.spartaMonster.train.common.exeption.BusinessException;
 import com.spartaMonster.train.common.resp.CommonResp;
+import com.spartaMonster.train.common.exception.BusinessException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindException;

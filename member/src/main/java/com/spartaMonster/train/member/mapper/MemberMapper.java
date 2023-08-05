@@ -2,7 +2,9 @@ package com.spartaMonster.train.member.mapper;
 
 import com.spartaMonster.train.member.domain.Member;
 import com.spartaMonster.train.member.domain.MemberExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface MemberMapper {
