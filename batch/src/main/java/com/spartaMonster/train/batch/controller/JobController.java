@@ -33,7 +33,9 @@ public class JobController {
         String jobClassName = cronJobReq.getName();
         String jobGroupName = cronJobReq.getGroup();
         LOG.info("手动执行任务开始：{}, {}", jobClassName, jobGroupName);
+        // 任务异步提交，函数直接返回
         schedulerFactoryBean.getScheduler().triggerJob(JobKey.jobKey(jobClassName, jobGroupName));
+
         return new CommonResp<>();
     }
 
