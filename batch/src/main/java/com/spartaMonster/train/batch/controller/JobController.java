@@ -37,6 +37,12 @@ public class JobController {
         return new CommonResp<>();
     }
 
+    /**
+     * 用于添加定时任务
+     * @param cronJobReq
+     * @return CommonResp
+     */
+
     @RequestMapping(value = "/add")
     public CommonResp add(@RequestBody CronJobReq cronJobReq) {
         String jobClassName = cronJobReq.getName();
