@@ -5,24 +5,21 @@ import cn.hutool.core.date.DateTime;
 import cn.hutool.core.util.ObjectUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.spartaMonster.train.common.context.LoginMemberContext;
-import com.spartaMonster.train.common.resp.PageResp;
 import com.spartaMonster.train.common.util.SnowUtil;
-import com.spartaMonster.train.member.domain.MemberExample;
 import com.spartaMonster.train.member.domain.Passenger;
 import com.spartaMonster.train.member.domain.PassengerExample;
 import com.spartaMonster.train.member.mapper.MemberMapper;
+import com.spartaMonster.train.member.resp.PassengerQueryResp;
+import com.spartaMonster.train.common.context.LoginMemberContext;
+import com.spartaMonster.train.common.resp.PageResp;
 import com.spartaMonster.train.member.mapper.PassengerMapper;
 import com.spartaMonster.train.member.req.PassengerQueryReq;
 import com.spartaMonster.train.member.req.PassengerSaveReq;
-import com.spartaMonster.train.member.resp.PassengerQueryResp;
 import jakarta.annotation.Resource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
