@@ -1,4 +1,4 @@
-package com.spartaMonster.train.common.exeption;
+package com.spartaMonster.train.common.exception;
 
 public enum BusinessExceptionEnum {
     MEMBER_MOBILE_EXIST("手机号已注册"),

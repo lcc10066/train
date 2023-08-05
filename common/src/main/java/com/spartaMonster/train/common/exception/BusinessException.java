@@ -1,4 +1,4 @@
-package com.spartaMonster.train.common.exeption;
+package com.spartaMonster.train.common.exception;
 
 public class BusinessException extends RuntimeException {
 
