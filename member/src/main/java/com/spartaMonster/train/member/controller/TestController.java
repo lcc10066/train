@@ -11,9 +11,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class TestController {
     /**
+     * RefreshScope注解
+     * 当注册中心的配置更新，服务检测到后， 会自动更新该注解修饰的注入对象的值
+     * org.springframework.cloud.context.config.annotation.RefreshScope
+     * 说明该注解与Nacos无关，可无缝切换为其他注册中心
+     *
+     */
+
+    /**
      *  读取配置文件配置的方式
      *
      *  如果想动态修改配置，可以基于Nacos来实现
+     */
+
+    /**
+     * 配置好nacos的配置中心后，该变量的读取和更新会基于配置中心
      */
 
     @Value("${test.nacos}")

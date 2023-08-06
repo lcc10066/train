@@ -77,6 +77,17 @@
 				<version>1.4.6</version>
 			</dependency>
 
+<!--	springcloud alibaba的各个内部组件的版本都封装在了这个pom中
+		子模块直接引入即可
+		-->
+
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-alibaba-dependencies</artifactId>
+				<version>2022.0.0.0-RC1</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 
 		</dependencies>
 	</dependencyManagement>
