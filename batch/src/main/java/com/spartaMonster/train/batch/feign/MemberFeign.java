@@ -1,6 +1,6 @@
 package com.spartaMonster.train.batch.feign;
 
-import com.jiawa.train.common.resp.CommonResp;
+import com.spartaMonster.train.common.resp.CommonResp;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
