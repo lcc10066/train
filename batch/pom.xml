@@ -23,8 +23,6 @@
             <artifactId>common</artifactId>
         </dependency>
 
-
-
 <!--   springboot自带的enableScheduling只适合单体应用，不适合集群
         没办法实时更改任务的信息和状态、策略
 
@@ -59,10 +57,16 @@
             <optional>true</optional>
         </dependency>
 
+        <!-- 限流熔断 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
+        <!-- sentinel + nacos -->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+        </dependency>
+
     </dependencies>
 </project>
