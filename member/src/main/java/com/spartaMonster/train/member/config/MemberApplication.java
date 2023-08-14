@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
-
 @SpringBootApplication
 @ComponentScan("com.spartaMonster")
 //启动类默认只扫描当前包及子包下的组件，位于其他地方的需要开启扫描

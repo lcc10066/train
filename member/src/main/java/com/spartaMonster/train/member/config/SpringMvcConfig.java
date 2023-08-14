@@ -9,11 +9,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class SpringMvcConfig implements WebMvcConfigurer {
-    /*
-       不是每个模块都需要使用位于common模块的拦截器，模块内部可以实现WebMvcConfigurer接口来配置标明本模块需要使用的拦截器
-       同时可以进行url配置
-     */
-   @Resource
+/*
+   不是每个模块都需要使用位于common模块的拦截器，模块内部可以实现WebMvcConfigurer接口来配置标明本模块需要使用的拦截器
+   同时可以进行url配置
+ */
+    @Resource
     LogInterceptor logInterceptor;
 
    @Resource
